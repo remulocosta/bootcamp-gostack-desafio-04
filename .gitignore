@@ -1,0 +1,3 @@
+node_modules
+**/TechList.js
+.DS_Store
