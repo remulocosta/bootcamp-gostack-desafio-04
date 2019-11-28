@@ -1,12 +1,150 @@
-body {
-  background: #f2f2f2;
-  font-family: Arial, Helvetica, sans-serif;
+
+* {
   margin: 0;
   padding: 0;
-  color: #3e3e3e;
+  box-sizing: border-box;
 }
 
-body * {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
+body {
+  background: #f2f2f2;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
 }
+
+input,
+button {
+  outline: 0;
+}
+
+.content {
+  max-width: 1024px;
+  min-width: 800px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+
+header#main-header {
+  height: 64px;
+  background: #4A90E2;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
+}
+
+header#main-header .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+header#main-header .content div {
+  display: flex;
+  align-items: center;
+  color: #FFF;
+}
+
+header#main-header .content div span {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.postlist {
+  width: 700px;
+  margin: 0 auto 20px;
+}
+
+.post {
+  color: #3E3E3E;
+  background: #FFF;
+  margin: 2px;
+  white-space: pre-wrap;
+  padding: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.10);
+  border-radius: 10px;
+}
+
+.comment {
+  font-size: 13px;
+  margin-left: 10px;
+  margin-top: 3px;
+}
+
+.comment:first-child{
+  margin-top: 40px;
+}
+
+.comment p {
+  background: #EEEEEE;
+  border-radius: 20px;
+  margin-top: 10px;
+  padding: 12px 12px;
+  color: #3E3E3E;
+  line-height: 1.6;
+}
+.comment p span {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.comment img {
+  width: 28px;
+  height: 28px;
+  margin-top: 10px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.post-comments div.comment {
+  display: flex;
+}
+
+.post-comments {
+  position: relative;
+}
+
+.post-comments::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #EEEEEE;
+    position: absolute;
+    top: -13px;
+}
+
+.post-header{
+  display: flex;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.post-header img {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.post-header .post-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.post-header .post-details span{
+    font-size: 11px;
+    color: #9A9A9A;
+}
+
+.post-header .post-details span:first-child {
+  font-size: 14px;
+  font-weight: bold;
+  color: #4A4A4A;
+}
+
+p.post-content {
+  margin: 10px 10px;
+}
+
